@@ -1,0 +1,28 @@
+:root {
+	--primary: #2D2847;
+	--gray-dark: #CDCDCD;
+	--gray-light: #F5F5F5;
+	--white: #FFFF;
+	--green: #58CF64;
+	--red: #FF7979;
+}
+
+:focus {
+	outline: transparent;
+}
+
+* {
+  margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
+body, input, textarea, button {
+  font-family: 'Monda', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
