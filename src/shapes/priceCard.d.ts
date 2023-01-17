@@ -4,5 +4,6 @@ export interface IPriceCard {
 	name: string;
 	buy?: number;
 	points?: number;
+	sell?: number;
 	variation: number;
 }

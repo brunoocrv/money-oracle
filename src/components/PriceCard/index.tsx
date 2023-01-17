@@ -1,8 +1,8 @@
-import { IPriceCard } from '../../interfaces/priceCard'
+import { IPriceCard } from '../../shapes/priceCard'
 
 import * as S from './styles'
 
-export function PriceCard(props: IPriceCard) {
+export const PriceCard = (props: IPriceCard) => {
 	return (
 		<S.PriceButton>
 				<span>{props.name}</span>

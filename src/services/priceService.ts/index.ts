@@ -1,5 +1,6 @@
-import { priceFormat } from "../../utils/priceFormat";
 import { api } from "../axios";
+
+import { priceFormat } from "../../utils/priceFormat";
 
 export const getPrices = async () => {
 	try {

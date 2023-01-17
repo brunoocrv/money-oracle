@@ -3,10 +3,10 @@ import * as S from './styles';
 import { PriceCard } from "../../components/PriceCard";
 import { useEffect, useState } from 'react';
 import { getPrices } from '../../services//priceService.ts';
-import { IPriceProps } from '../../interfaces/priceProps';
+import { IPriceProps } from '../../shapes/priceProps';
 import { Divider } from '../../components/Divider';
 
-export function Main() {
+export const Main = () => {
 	const [currencies, setCurrencies] = useState<IPriceProps>();
 	const [stocks, setStocks] = useState<IPriceProps>();
 

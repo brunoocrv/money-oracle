@@ -34,3 +34,9 @@ button {
 	outline: none;
 	border: none;
 }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+}

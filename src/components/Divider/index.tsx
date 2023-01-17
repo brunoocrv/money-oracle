@@ -1,5 +1,5 @@
 import * as S from './styles'
 
-export function Divider() {
+export const Divider = () => {
 	return <S.Container />
 }

@@ -1,10 +1,11 @@
 import './styles/global.css'
 import { Main } from './pages/Main';
+import { Auth } from './pages/Auth';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-			<Main />
+			<Auth />
 		</div>
   );
 }
