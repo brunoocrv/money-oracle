@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const PriceButton = styled.button`
 	width: 15rem;
+	height: 8rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	margin: 1rem;
 	align-items: center;
+	justify-content: center;
 	padding: 1rem;
 	border-radius: 1rem;
 	box-shadow:
@@ -19,7 +21,10 @@ export const Container = styled.div`
 	> span {
 		margin-bottom: 0.5rem;
 		font-weight: bold;
-		font-size: 1.5rem;
+	}
+
+	:hover {
+		opacity: 0.5;
 	}
 `
 
@@ -27,11 +32,10 @@ export const PricesContainer = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 `
 
-export const Variation = styled.span`
-	background: var(--green);
+export const Variation = styled.span<{positive?: boolean}>`
+	background: ${props => props.positive ? 'var(--green)' : 'var(--red)'};
 	padding: 0 0.5rem;
 	border-radius: 2rem;
 `

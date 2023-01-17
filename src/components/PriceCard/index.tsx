@@ -4,14 +4,20 @@ import * as S from './styles'
 
 export function PriceCard(props: IPriceCard) {
 	return (
-		<button>
-			<S.Container>
-				<span>{props.currency.name}</span>
+		<S.PriceButton>
+				<span>{props.name}</span>
 				<S.PricesContainer>
-					<span>{props.currency.buy}</span>
-					<S.Variation>{props.currency.variation}%</S.Variation>
+					{
+						props.type === 'currency' && props.buy
+							? <span>{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(props.buy)}</span>
+							: <span>Pts: {props.points}</span>
+					}
+					{
+						props.variation > 0 
+							? <S.Variation positive>{props.variation}%</S.Variation> 
+							: <S.Variation>{props.variation}%</S.Variation>
+					}
 				</S.PricesContainer>
-			</S.Container>
-		</button>
+		</S.PriceButton>
 	)
 }

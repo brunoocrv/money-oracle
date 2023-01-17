@@ -1,8 +1,8 @@
 export interface IPriceCard {
-	source: string;
-	currency: {
-		name: string;
-		buy: string;
-		variation: number;
-	},
+	type: 'currency' | 'stock';
+	source?: string;
+	name: string;
+	buy?: number;
+	points?: number;
+	variation: number;
 }
