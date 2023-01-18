@@ -15,10 +15,9 @@ export const Auth = () => {
   const handleSubmit = async (event: any) => {
 		event.preventDefault();
 		const email = event.target.email.value;
-		const password = event.target.password.value;
 
 		try {
-			await auth.authenticate(email, password);
+			await auth.authenticate(email);
 			navigate('/');
 		} catch (error) {
 			return alert('Check your credentials');
@@ -37,12 +36,6 @@ export const Auth = () => {
 						type="email"
 						id="email"
 						placeholder="Insert your e-mail"
-						required
-					/>
-					<Input
-						type="password"
-						id="password"
-						placeholder="Insert your password"
 						required
 					/>
 					<Button type="submit">Login</Button>

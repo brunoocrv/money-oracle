@@ -1,7 +1,6 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { handleLogin } from "../services/fakeApiService";
 import { IAuth, IAuthContext } from "../shapes/authProps";
 
 
@@ -17,13 +16,9 @@ export const AuthProvider = ({ children }: { children?: ReactNode }) => {
 	const [user, setUser] = useState<IAuth | null>();
 	const navigate = useNavigate();
 
-	const authenticate = async (email: string, password: string) => {
-		const response = await handleLogin(email, password);
-
-		const payload = { token: response.token, email };
-	
-		setUser(payload);
-		setUserLocalStorage(payload);
+	const authenticate = async (email: string) => {
+		setUser({email: email});
+		setUserLocalStorage({email});
 	}
 
 	useEffect(() => {
@@ -51,8 +46,8 @@ export const AuthProvider = ({ children }: { children?: ReactNode }) => {
 	)
 }
 
-const setUserLocalStorage = (user: IAuth | null) => {
-	localStorage.setItem('user', JSON.stringify(user))
+const setUserLocalStorage = (email: IAuth | null) => {
+	localStorage.setItem('user', JSON.stringify(email))
 }
 
 const getUserLocalStorage = () => {
