@@ -12,10 +12,4 @@ Para acesso da API de cotações, recomendo gerar uma [nova key](https://console
 
 Todas URLs externas devem ficar em um `.env`.
 
-Para autenticação de usuário, eu preferi usar um serviço externo de [API Fake](https://reqres.in/), e as credencias necessárias para login são:
-
-`email: eve.holt@reqres.in`
-<br>
-`password: cityslicka`
-
 Por fim, para iniciar o projeto bastar executar: `npm start`.
