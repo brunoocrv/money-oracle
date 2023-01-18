@@ -2,6 +2,10 @@
 
 Projeto desenvolvido para analisar cotações atuais de moedas e ações com base nos dados da [HG Finance](https://hgbrasil.com/status/finance).
 
+## Deploy Netlify
+
+Aplicação disponível a partir do deploy feito pela Netlify: [Money Oracle](https://tubular-seahorse-641dc4.netlify.app).
+
 ## Setup Local
 
 Para startar o projeto localmente, precisa ser realizado o clone do projeto e instalação de dependências usando:
