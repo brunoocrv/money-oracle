@@ -1,0 +1,2 @@
+:root{--primary:#2d2847;--gray-dark:#cdcdcd;--gray-light:#f5f5f5;--white:#fff;--green:#58cf64;--red:#d44444}:focus{outline:transparent}*{background:#2d2847;background:var(--primary);box-sizing:border-box;color:#fff;color:var(--white);margin:0;padding:0}html{-webkit-font-smoothing:antialiased}body,button,input,textarea{font-family:Monda,sans-serif;font-size:1rem;font-weight:400}button{border:none;cursor:pointer;outline:none}@media (max-width:768px){html{font-size:87.5%}}
+/*# sourceMappingURL=main.c56ac121.css.map*/
