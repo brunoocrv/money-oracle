@@ -10,7 +10,7 @@ Para startar o projeto localmente, precisa ser realizado o clone do projeto e in
 
 Para acesso da API de cotações, recomendo gerar uma [nova key](https://console.hgbrasil.com/documentation/finance#autenticacao-e-chave), pois as requisições diárias são limitadas e após atingido o limite, deverá ser criada uma nova key.
 
-Todas URLs externas devem ficar em um `.env` assim como é descrito no `.env.example`
+Todas URLs externas devem ficar em um `.env`.
 
 Para autenticação de usuário, eu preferi usar um serviço externo de [API Fake](https://reqres.in/), e as credencias necessárias para login são:
 
@@ -18,4 +18,4 @@ Para autenticação de usuário, eu preferi usar um serviço externo de [API Fak
 <br>
 `password: cityslicka`
 
-Por fim, para iniciar o projeto bastar executar: `npm start`
+Por fim, para iniciar o projeto bastar executar: `npm start`.
