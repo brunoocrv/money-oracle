@@ -1,13 +1,11 @@
-import { useAuth } from "../../contexts/auth";
-import { useNavigate } from 'react-router-dom';
 
-export const ProtectedLayout = ({ children }: any) => {
+import { Navigate, Outlet } from 'react-router-dom';
+import { useAuth } from '../../contexts/auth';
+
+export const ProtectedLayout = () => {
 	const auth = useAuth();
-	const navigate = useNavigate();
 
-	if (!auth.email) {
-		return navigate("/");
-	}
+	if (!auth.email) return <Navigate to="/login" replace />;
 
-	return children;
+	return <Outlet />;
 }

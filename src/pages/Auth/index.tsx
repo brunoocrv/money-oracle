@@ -1,10 +1,12 @@
+import { useNavigate } from 'react-router-dom';
+
 import * as S from './styles';
 import logo from '../../assets/icons/money-oracle.svg';
 
+import { useAuth } from '../../contexts/auth';
+
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
-import { useAuth } from '../../contexts/auth';
-import { useNavigate } from 'react-router-dom';
 
 export const Auth = () => {
 	const auth = useAuth();
@@ -17,7 +19,7 @@ export const Auth = () => {
 
 		try {
 			await auth.authenticate(email, password);
-			navigate('/home');
+			navigate('/');
 		} catch (error) {
 			return alert('Check your credentials');
 		}

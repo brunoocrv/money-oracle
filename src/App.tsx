@@ -1,14 +1,17 @@
 import './styles/global.css'
 
-import {Router } from './routes/router';
+import { Router as Routes } from './routes/router';
 import { AuthProvider } from './contexts/auth'
+import { BrowserRouter } from 'react-router-dom';
 
 
 const App = () => {
   return (
-		<AuthProvider>
-			<Router />
-		</AuthProvider>
+		<BrowserRouter>
+			<AuthProvider>
+				<Routes />
+			</AuthProvider>
+		</BrowserRouter>
 	)
 }
 
