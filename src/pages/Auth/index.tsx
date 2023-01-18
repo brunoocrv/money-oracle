@@ -15,11 +15,6 @@ export const Auth = () => {
 		const email = event.target.email.value;
 		const password = event.target.password.value;
 
-		// {
-		// 	"email": "eve.holt@reqres.in",
-		// 	"password": "cityslicka"
-		// }
-
 		try {
 			await auth.authenticate(email, password);
 			navigate('/home');

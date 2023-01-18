@@ -1,19 +1,8 @@
 import { createContext, useContext, useState, useEffect } from "react";
+
 import { handleLogin } from "../services/fakeApiService";
+import { IAuth, IAuthContext, IAuthProvider } from "../shapes/authProps";
 
-interface IAuth {
-	email?: string;
-	token?: string;
-}
-
-interface IAuthContext extends IAuth {
-	authenticate: (email: string, password: string) => Promise<void>;
-	logout: () => void;
-}
-
-interface IAuthProvider {
-	children: JSX.Element;
-}
 
 export const AuthContext = createContext<IAuthContext>({} as IAuthContext);
 

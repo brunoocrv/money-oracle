@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useAuth } from '../../contexts/auth';
 
 import * as S from './styles';
+import logo from '../../assets/icons/money-oracle.svg';
 
 import { getPrices } from '../../services/priceService';
 import { IPriceProps } from '../../shapes/priceProps';
@@ -26,38 +27,48 @@ export const Main = () => {
 	}, []);
 
 	return (
-		<S.Container>
-		<h1>Currencies</h1>
-		<button onClick={auth.logout}>Sair</button>
-		<Divider />
-		<S.Section>
-			{
-				currencies ? currencies.prices.map((item: any) => {
-					return <PriceCard
-						key={item.name}
-						type="currency"
-						name={item.name}
-						buy={item.buy}
-						variation={item.variation}
-					/>
-				}) : <span>Nothing to show!!</span>
-			}
-		</S.Section>
-		<h1>Stocks</h1>
-		<Divider />
-		<S.Section>
-		{
-				stocks ? stocks.prices.map((item: any) => {
-					return <PriceCard
-						key={item.name}
-						type="stock"
-						name={item.name}
-						points={item.points}
-						variation={item.variation}
-					/>
-				}) : <span>Nothing to show!!</span>
-			}
-		</S.Section>
+		<>
+			<S.Header>
+				<S.HeaderLogo>
+					<img src={logo} alt="Money Oracle Logo"/>
+					<span>Money Oracle</span>
+				</S.HeaderLogo>
+				<button onClick={auth.logout}>
+					<S.Logout />
+				</button>
+			</S.Header>
+			<S.Container>
+			<h1>Currencies</h1>
+			<Divider />
+			<S.Section>
+				{
+					currencies ? currencies.prices.map((item: any) => {
+						return <PriceCard
+							key={item.name}
+							type="currency"
+							name={item.name}
+							buy={item.buy}
+							variation={item.variation}
+						/>
+					}) : <span>Nothing to show!!</span>
+				}
+			</S.Section>
+			<h1>Stocks</h1>
+			<Divider />
+			<S.Section>
+				{
+					stocks ? stocks.prices.map((item: any) => {
+						return <PriceCard
+							key={item.name}
+							type="stock"
+							name={item.name}
+							points={item.points}
+							variation={item.variation}
+						/>
+					}) : <span>Nothing to show!!</span>
+				}
+			</S.Section>
 		</S.Container>
+		</>
 	);
 }
