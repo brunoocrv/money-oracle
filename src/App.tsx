@@ -1,13 +1,15 @@
 import './styles/global.css'
-import { Main } from './pages/Main';
-import { Auth } from './pages/Auth';
+
+import {Router } from './routes/router';
+import { AuthProvider } from './contexts/auth'
+
 
 const App = () => {
   return (
-    <div className="App">
-			<Auth />
-		</div>
-  );
+		<AuthProvider>
+			<Router />
+		</AuthProvider>
+	)
 }
 
 export default App;
